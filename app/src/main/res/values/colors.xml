@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#88888b</color>
+    <color name="colorPrimaryDark">#686868</color>
+    <color name="colorAccent">#a8cabe</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorPaleWhite">#cecdcd</color>
+    <color name="chatTimeColor">#dedcdc</color>
+</resources>

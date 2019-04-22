@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tale_item_padding">20dp</dimen>
+    <dimen name="tale_spacing">10dp</dimen>
+    <dimen name="magic_button_size">90dp</dimen>
+</resources>
