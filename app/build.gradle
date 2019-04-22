@@ -1,5 +1,8 @@
 apply plugin: 'com.android.application'
 
+def appSigningProperties = new Properties()
+appSigningProperties.load(new FileInputStream(rootProject.file("signingKeys/signing.properties")))
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -11,10 +14,21 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "CHAT_ROOM_ID", '"0_001"'
     }
+
+    signingConfigs {
+        release {
+            storeFile file(appSigningProperties['storeFile'])
+            storePassword appSigningProperties['storePassword']
+            keyAlias appSigningProperties['keyAlias']
+            keyPassword appSigningProperties['keyPassword']
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 
